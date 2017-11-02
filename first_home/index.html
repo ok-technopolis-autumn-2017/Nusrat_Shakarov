@@ -1,32 +1,79 @@
 <!DOCTYPE HTML>
-<html>
- <head>
-    <title>Hw 1</title>
- </head>
-<body>  
 
-<div>
-<div>
-  <select multiple>
-    <option disabled>What needs to be don</option>
-    <option >HTML</option>
-    <option selected>CSS</option>
-    <option >JS</option>
-    <option >JS tools</option>
-   </select>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hw1</title>
+</head>
+
+<body class="body">
+
+<div class="todos-header">
+    <h1 class="todos-title">todos</h1>
 </div>
 
-<div >
- <div>
-  <p>status: </p>
- </div>
- <div>
-  <div ><button type="submit" >All</button></div>
-  <div ><button type="submit">Active</button></div>
-  <div ><button type="submit">Completed</button></div>
-  <div ><button type="submit">Clear completed</button></div>
-</div>
-</div>
+<div class="todos-main">
+    <div class="todos-add">
+        <button class="todo-add_select-all" aria-label="Mark all as completed"></button>
+        <input class="todo-add_input" placeholder="What needs to be done?" aria-label="Add new todo"/>
+    </div>
 
- </body>
+    <div class="todos-list">
+        <div class="todo-item">
+            <input type="checkbox"  class="todo-item_ready-mark" aria-label="Mark as active">
+            <textarea class="todo-item_text">HTML
+            </textarea>
+            <button class="todo-item_remove" aria-label="Remove todo"></button>
+        </div>
+
+        <div class="todo-item __ready">
+            <input type="checkbox" checked="checked" class="todo-item_ready-mark" aria-label="Mark as completed">
+            <textarea class="todo-item_text">CSS
+            </textarea>
+            <button class="todo-item_remove" aria-label="Remove todo"></button>
+        </div>
+
+        <div class="todo-item">
+            <input type="checkbox"  class="todo-item_ready-mark" aria-label="Mark as active">
+            <textarea class="todo-item_text">JS
+            </textarea>
+            <button class="todo-item_remove" aria-label="Remove todo"></button>
+        </div>
+
+        <div class="todo-item">
+            <input type="checkbox"  class="todo-item_ready-mark" aria-label="Mark as active">
+            <textarea class="todo-item_text">JS tools
+            </textarea>
+            <button class="todo-item_remove" aria-label="Remove todo"></button>
+        </div>
+    </div>
+
+    <div class="todos-actions-bar">
+        <div class="todos-actions-bar_counter"
+             aria-label="Number of active todos">
+            3 items left
+        </div>
+
+        <div class="todo-filters">
+            <button class="todo-filter __active" data-filter="all"
+                    arial-label="Show all">
+                All
+            </button>
+            <button class="todo-filter" data-filter="ready"
+                    arial-label="Show active">
+                Active
+            </button>
+            <button class="todo-filter __active" data-filter="unready"
+                    arial-label="Show completed">
+                Completed
+            </button>
+        </div>
+
+        <button class="todos-actions-bar_clear-completed" aria-label="delete all completed todos">
+            Clear completed
+        </button>
+    </div>
+</div>
+</body>
 </html>
