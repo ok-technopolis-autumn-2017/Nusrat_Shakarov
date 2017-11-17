@@ -1,0 +1,44 @@
+.todos-actions-bar{
+    padding-top: 5px;
+    font-size: 14px;
+    color: #888888;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    }
+
+.todos-actions-bar_counter{
+    float: left;
+    margin-left: 12px;
+    }
+
+
+.todo-filters{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+.todo-filter{
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #888888;
+    }
+.__active{
+    border: 1px solid #EBDFDF;
+    border-radius: 5px;
+    }
+
+
+.todos-actions-bar_clear-completed{
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #888888;
+    float: right;
+    margin-right: 12px;
+    }
+

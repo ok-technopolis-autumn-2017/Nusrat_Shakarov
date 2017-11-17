@@ -1,0 +1,120 @@
+.todos-list {
+        border: none;
+    }
+
+.todo-item {
+    position: relative;
+    height: 60px;
+    border-bottom: 1px solid #E6E6E6;
+    overflow: hidden;
+    display: flex;
+    z-index: 2;
+    }
+.todo-item:hover > .todo-item_text{
+    background: #FAFAFA;
+    }
+.todo-item:hover > .todo-item_remove{
+    background: url('../../img/icons/close.png') no-repeat 0 0;
+    }
+.todo-item:hover > .input-checkbox{
+    background: #FAFAFA;
+    }
+.todo-item:hover{
+    background: #FAFAFA;
+    }
+
+.todo-item:hover .input-checkbox_visual_circle {
+    background: white;
+    }
+
+.input-checkbox {
+    position: relative;
+    float: left;
+    align-self: center;
+    background: none;
+    width: 60px;
+    height: 60px;
+    }
+
+.input-checkbox input[type=checkbox] {
+    background: none;
+    }
+
+.input-checkbox_target {
+
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    }
+
+.input-checkbox_visual {
+        position: relative;
+    }
+
+.input-checkbox_visual_circle {
+
+    position: relative;
+    border-radius: 34px;
+    border: 1px solid #E7E7E7;
+    width: 34px;
+    height: 34px;
+    left: 50%;
+    top: 50%;
+    margin: -17px -17px;
+
+    }
+
+.input-checkbox_target:checked ~ .input-checkbox_visual {
+
+    width: 20px;
+    height: 20px;
+    position: relative;
+    background: url('../../img/icons/completed.png') no-repeat 0 0;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    margin: -30px -10px;
+    }
+
+.input-checkbox_target:checked ~ .input-checkbox_visual_circle {
+    border-color: #61C3B1;
+    }
+
+.todo-item_remove {
+    order: 2;
+    float: right;
+    align-self: flex-end;
+    margin-bottom: 21px;
+    margin-right: 12px;
+    border:none;
+    width: 16px;
+    height: 16px;
+    background: none;
+    }
+
+.todo-item_text {
+    flex: 1 0;
+    overflow: hidden;
+    height: 64px;
+    border: none;
+    resize: none;
+    outline: none;
+    height: auto;
+    white-space: normal;
+    display:inline-block;
+    vertical-align: middle;
+    padding-top: 20px;
+    box-sizing: border-box;
+    color: #666666;
+
+    }
+
+.__ready textarea{
+    text-decoration:line-through;
+    color: #CFCFCF;
+    }
