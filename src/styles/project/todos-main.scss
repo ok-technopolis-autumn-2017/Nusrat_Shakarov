@@ -1,5 +1,7 @@
+@import "../config/global";
+
 .todos-main{
-    background: #fff;
+    background: $main-color;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
     position: relative;
     }
@@ -9,7 +11,7 @@
         content: '';
         position: absolute;
         top: 100%;
-        background: #fff;
+        background: $main-color;
         box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
         z-index: -1;
         }

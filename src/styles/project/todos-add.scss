@@ -1,5 +1,7 @@
+@import "../config/global";
+
 .todos-add {
-    border-bottom: 1px solid #E6E6E6;
+    border-bottom: 1px solid $add-border-color;
     }
 .todos-add:after {
     content: '';
@@ -8,8 +10,8 @@
     }
 
 .todos-add_select-all {
-    width: 64px;
-    height: 64px;
+    width: $add-width;
+    height: $add-height;
     background: none;
     border: none;
     padding: 0;
@@ -20,9 +22,9 @@
     }
 
 .todos-add_select-all_icon {
-    width: 24px;
-    height: 12px;
-    background: url('../../img/icons/select-all.png') no-repeat 0 0;
+    width: $add-select-icon-width;
+    height: $add-select-icon-height;
+    background: url('../../../img/icons/select-all.png') no-repeat 0 0;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -41,8 +43,8 @@
     border: 0;
     background: none;
 
-    color: #666;
-    font-size: 24px;
+    color: $add-new-item-font-color;
+    font-size: $default-size;
     line-height: 30px;
     font-weight: 200;
     padding-right: 12px;
@@ -51,6 +53,6 @@
 
     }
 .todos-add_new-item::placeholder {
-    color: #ccc;
+    color: $add-placeholder-color;
     font-style: italic;
     }

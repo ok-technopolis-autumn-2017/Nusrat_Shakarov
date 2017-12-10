@@ -6,30 +6,30 @@ const rebaseUrls = require('gulp-css-rebase-urls');
 
 
 gulp.task('images-clean-dist', () =>
-    gulp.src('./public/dist/images', {read: false})
-        .pipe(clean())
+gulp.src('./public/dist/img', {read: false})
+    .pipe(clean())
 );
 
 gulp.task('images', ['images-clean-dist'], () =>
-    gulp.src('./src/img/**/*')
-        .pipe(gulp.dest('./public/dist/img'))
+gulp.src('./src/img/**/*')
+    .pipe(gulp.dest('./public/dist/img'))
 );
 
-gulp.task('images:watch', ['images'],  () => 
-    gulp.watch('./src/img/**/*', ['images'])
+gulp.task('images:watch', ['images'],  () =>
+gulp.watch('./src/img/**/*', ['images'])
 );
 
 gulp.task('sass', () =>
-    gulp.src('./src/styles/default.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
-        .pipe(rebaseUrls())
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('./public/dist/styles'))
+gulp.src('./src/styles/default.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(rebaseUrls())
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('./public/dist/styles'))
 );
 
 gulp.task('sass:watch', ['sass'], () =>
-    gulp.watch('./src/styles/**/*.scss', ['sass'])
+gulp.watch('./src/styles/**/*.scss', ['sass'])
 );
 
 

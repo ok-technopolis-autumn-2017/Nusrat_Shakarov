@@ -1,0 +1,8 @@
+@import "../global";
+
+@mixin action-bar-clear(){
+  background: none;
+  border: none;
+  font-size: $action-bar-size;
+  color: $action-bar-color;
+}

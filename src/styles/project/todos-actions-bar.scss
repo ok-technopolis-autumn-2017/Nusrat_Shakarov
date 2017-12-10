@@ -1,12 +1,15 @@
+@import "../config/global";
+@import "../config/mixins/clear";
+
 .todos-actions-bar{
     padding-top: 5px;
-    font-size: 14px;
-    color: #888888;
+    font-size: $action-bar-size;
+    color: $action-bar-color;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40px;
+    height: $action-bar-height;
     }
 
 .todos-actions-bar_counter{
@@ -22,22 +25,16 @@
     align-items: center;
     }
 .todo-filter{
-    background: none;
-    border: none;
-    font-size: 14px;
-    color: #888888;
+    @include action-bar-clear();
     }
 .__active{
-    border: 1px solid #EBDFDF;
+    border: 1px solid $action-bar-border-color;
     border-radius: 5px;
     }
 
 
 .todos-actions-bar_clear-completed{
-    background: none;
-    border: none;
-    font-size: 14px;
-    color: #888888;
+    @include action-bar-clear();
     float: right;
     margin-right: 12px;
     }

@@ -1,11 +1,13 @@
+@import "../config/global";
+
 .todos-list {
         border: none;
     }
 
 .todo-item {
     position: relative;
-    height: 60px;
-    border-bottom: 1px solid #E6E6E6;
+    height: $list-height;
+    border-bottom: 1px solid $list-border-color;
     overflow: hidden;
     display: flex;
     z-index: 2;
@@ -14,13 +16,13 @@
     background: #FAFAFA;
     }
 .todo-item:hover > .todo-item_remove{
-    background: url('../../img/icons/close.png') no-repeat 0 0;
+    background: url('../../../img/icons/close.png') no-repeat 0 0;
     }
 .todo-item:hover > .input-checkbox{
-    background: #FAFAFA;
+    background: $list-item-hover-color;
     }
 .todo-item:hover{
-    background: #FAFAFA;
+    background: $list-item-hover-color;
     }
 
 .todo-item:hover .input-checkbox_visual_circle {
@@ -32,8 +34,8 @@
     float: left;
     align-self: center;
     background: none;
-    width: 60px;
-    height: 60px;
+    width: $list-width;
+    height: $list-height;
     }
 
 .input-checkbox input[type=checkbox] {
@@ -60,9 +62,9 @@
 
     position: relative;
     border-radius: 34px;
-    border: 1px solid #E7E7E7;
-    width: 34px;
-    height: 34px;
+    border: 1px solid $checkbox-circle-color;
+    width: $checkbox-circle-size;
+    height: $checkbox-circle-size;
     left: 50%;
     top: 50%;
     margin: -17px -17px;
@@ -74,7 +76,7 @@
     width: 20px;
     height: 20px;
     position: relative;
-    background: url('../../img/icons/completed.png') no-repeat 0 0;
+    background: url('../../../img/icons/completed.png') no-repeat 0 0;
     border-radius: 50%;
     left: 50%;
     top: 50%;
@@ -82,7 +84,7 @@
     }
 
 .input-checkbox_target:checked ~ .input-checkbox_visual_circle {
-    border-color: #61C3B1;
+    border-color: $checkbox-checked-circle-color;
     }
 
 .todo-item_remove {
@@ -92,15 +94,15 @@
     margin-bottom: 21px;
     margin-right: 12px;
     border:none;
-    width: 16px;
-    height: 16px;
+    width: $item-remove-size;
+    height: $item-remove-size;
     background: none;
     }
 
 .todo-item_text {
     flex: 1 0;
     overflow: hidden;
-    height: 64px;
+    height: $item-text-height;
     border: none;
     resize: none;
     outline: none;
@@ -110,11 +112,11 @@
     vertical-align: middle;
     padding-top: 20px;
     box-sizing: border-box;
-    color: #666666;
+    color: $item-text-color;
 
     }
 
 .__ready textarea{
     text-decoration:line-through;
-    color: #CFCFCF;
+    color: $_ready-color;
     }
