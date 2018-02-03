@@ -9,7 +9,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: $action-bar-height;
     }
 
 .todos-actions-bar_counter{
@@ -25,7 +24,7 @@
     align-items: center;
     }
 .todo-filter{
-    @include action-bar-clear();
+    @include clear($action-bar-size, $action-bar-color);
     }
 .__active{
     border: 1px solid $action-bar-border-color;
@@ -34,7 +33,7 @@
 
 
 .todos-actions-bar_clear-completed{
-    @include action-bar-clear();
+    @include clear($action-bar-size, $action-bar-color);
     float: right;
     margin-right: 12px;
     }

@@ -207,20 +207,19 @@ body {
   position: relative;
   height: 60px;
   border-bottom: 1px solid #E6E6E6;
-  overflow: hidden;
   display: flex;
   z-index: 2;
 }
 
-.todo-item:hover > .todo-item_text {
+.todo-item:hover .todo-item_text {
   background: #FAFAFA;
 }
 
-.todo-item:hover > .todo-item_remove {
-  background: url("../img/icons/close.png") no-repeat 0 0;
+.todo-item:hover .todo-item_remove {
+  visibility: visible;
 }
 
-.todo-item:hover > .input-checkbox {
+.todo-item:hover .input-checkbox {
   background: #FAFAFA;
 }
 
@@ -230,6 +229,40 @@ body {
 
 .todo-item:hover .input-checkbox_visual_circle {
   background: white;
+}
+
+.todo-item_remove {
+  order: 2;
+  float: right;
+  align-self: flex-end;
+  margin-bottom: 21px;
+  margin-right: 12px;
+  border: none;
+  width: 16px;
+  height: 16px;
+  background: url("../img/icons/close.png") no-repeat 0 0;
+  visibility: hidden;
+}
+
+.todo-item_text {
+  flex: 1 0;
+  overflow: hidden;
+  height: 64px;
+  border: none;
+  resize: none;
+  outline: none;
+  height: auto;
+  white-space: normal;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 20px;
+  box-sizing: border-box;
+  color: #666;
+}
+
+.__ready .todo-item_text {
+  text-decoration: line-through;
+  color: #CFCFCF;
 }
 
 .input-checkbox {
@@ -286,39 +319,6 @@ body {
   border-color: #61C3B1;
 }
 
-.todo-item_remove {
-  order: 2;
-  float: right;
-  align-self: flex-end;
-  margin-bottom: 21px;
-  margin-right: 12px;
-  border: none;
-  width: 16px;
-  height: 16px;
-  background: none;
-}
-
-.todo-item_text {
-  flex: 1 0;
-  overflow: hidden;
-  height: 64px;
-  border: none;
-  resize: none;
-  outline: none;
-  height: auto;
-  white-space: normal;
-  display: inline-block;
-  vertical-align: middle;
-  padding-top: 20px;
-  box-sizing: border-box;
-  color: #666;
-}
-
-.__ready textarea {
-  text-decoration: line-through;
-  color: #CFCFCF;
-}
-
 .todos-actions-bar {
   padding-top: 5px;
   font-size: 14px;
@@ -327,7 +327,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
 }
 
 .todos-actions-bar_counter {
