@@ -1,0 +1,17 @@
+@import "config/global";
+
+body, input, button, textarea, h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: $default-size;
+}
+
+body {
+  background: $main-background;
+}
+
+.todos-main-wrapper {
+  min-width: $main-wrapper-min-width;
+  max-width: $main-wrapper-max-width;
+  margin: 0 auto;
+  padding: 0 20px;
+}

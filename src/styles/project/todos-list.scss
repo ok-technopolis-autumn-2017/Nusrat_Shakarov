@@ -1,0 +1,65 @@
+@import "../config/global";
+
+.todos-list {
+        border: none;
+    }
+
+.todo-item {
+    position: relative;
+    height: $list-height;
+    border-bottom: 1px solid $list-border-color;
+    display: flex;
+    z-index: 2;
+    }
+.todo-item:hover  .todo-item_text{
+    background: #FAFAFA;
+    }
+.todo-item:hover  .todo-item_remove{
+    visibility: visible;
+    }
+.todo-item:hover  .input-checkbox{
+    background: $list-item-hover-color;
+    }
+.todo-item:hover{
+    background: $list-item-hover-color;
+    }
+
+.todo-item:hover .input-checkbox_visual_circle {
+    background: white;
+    }
+
+
+.todo-item_remove {
+    order: 2;
+    float: right;
+    align-self: flex-end;
+    margin-bottom: 21px;
+    margin-right: 12px;
+    border:none;
+    width: $item-remove-size;
+    height: $item-remove-size;
+    background: url('../../../img/icons/close.png') no-repeat 0 0;
+    visibility: hidden;
+    }
+
+.todo-item_text {
+    flex: 1 0;
+    overflow: hidden;
+    height: $item-text-height;
+    border: none;
+    resize: none;
+    outline: none;
+    height: auto;
+    white-space: normal;
+    display:inline-block;
+    vertical-align: middle;
+    padding-top: 20px;
+    box-sizing: border-box;
+    color: $item-text-color;
+
+    }
+
+.__ready .todo-item_text{
+    text-decoration:line-through;
+    color: $_ready-color;
+    }

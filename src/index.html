@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hw1</title>
+
+    <link rel="stylesheet" href="../public/dist/styles/default.css"/>
+</head>
+
+<body class="body">
+<div class="todos-main-wrapper">
+    <div class="todos-header">
+        <h1 class="todos-title">todos</h1>
+    </div>
+
+    <div class="todos-main">
+        <div class="todos-add">
+            <button class="todos-add_select-all" aria-label="Mark all as completed">
+                <div class="todos-add_select-all_icon"></div>
+            </button>
+
+            <div class="todos-add_new-item-w">
+                <input class="todos-add_new-item" placeholder="What needs to be done?" aria-label="Add new todo"/>
+            </div>
+        </div>
+
+        <div class="todos-list">
+            <div class="todo-item">
+                <div class="input-checkbox">
+                    <input type="checkbox" class="input-checkbox_target" aria-label="Mark as active">
+                    <div class="input-checkbox_visual_circle">
+                    </div>
+                    <div class="input-checkbox_visual">
+                    </div>
+                </div>
+                <button class="todo-item_remove" aria-label="Remove todo"></button>
+                <div contenteditable="false" class="todo-item_text">HTML</div>
+            </div>
+
+            <div class="todo-item __ready">
+                <div class="input-checkbox">
+                    <input type="checkbox" checked="checked" class="input-checkbox_target" aria-label="Mark as completed">
+                    <div class="input-checkbox_visual_circle">
+                    </div>
+                    <div class="input-checkbox_visual">
+                    </div>
+                </div>
+
+                <div contenteditable="false" class="todo-item_text">CSS</div>
+                <button class="todo-item_remove" aria-label="Remove todo"></button>
+            </div>
+
+            <div class="todo-item">
+                <div class="input-checkbox">
+                    <input type="checkbox" class="input-checkbox_target" aria-label="Mark as active">
+                    <div class="input-checkbox_visual_circle">
+                    </div>
+                    <div class="input-checkbox_visual">
+                    </div>
+
+                </div>
+                <div contenteditable="false" class="todo-item_text">JS</div>
+                <button class="todo-item_remove" aria-label="Remove todo"></button>
+            </div>
+            <div class="todo-item">
+                <div class="input-checkbox">
+                    <input type="checkbox" class="input-checkbox_target" aria-label="Mark as active">
+                    <div class="input-checkbox_visual_circle">
+                    </div>
+                    <div class="input-checkbox_visual">
+                    </div>
+
+                </div>
+                <div contenteditable="false" class="todo-item_text">JS tools</div>
+                <button class="todo-item_remove" aria-label="Remove todo"></button>
+            </div>
+
+
+        </div>
+
+        <div class="todos-actions-bar">
+            <div class="todos-actions-bar_counter"
+                 aria-label="Number of active todos">
+                3 items left
+            </div>
+
+            <div class="todo-filters">
+                <button class="todo-filter __active" data-filter="all"
+                        arial-label="Show all">
+                    All
+                </button>
+                <button class="todo-filter" data-filter="ready"
+                        arial-label="Show active">
+                    Active
+                </button>
+                <button class="todo-filter" data-filter="unready"
+                        arial-label="Show completed">
+                    Completed
+                </button>
+            </div>
+
+            <button class="todos-actions-bar_clear-completed" aria-label="delete all completed todos">
+                Clear completed
+            </button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

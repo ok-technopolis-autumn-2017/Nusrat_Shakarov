@@ -1,0 +1,8 @@
+@import "../global";
+
+@mixin clear($font-size, $color){
+  background: none;
+  border: none;
+  font-size: $font-size;
+  color: $color;
+}
